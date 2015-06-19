@@ -1,72 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="io.lawnmower.coinbase"
-        version="0.0.1">
-
-  <name>Coinbase</name>
-
+<?xml version='1.0' encoding='UTF-8'?> 
+<plugin xmlns='http://www.phonegap.com/ns/plugins/1.0' id='io.lawnmower.coinbase' version='0.0.1'>
+  <name>
+    Coinbase
+  </name>
   <description>
-    Cordova plugin for Coinbase native (iOS/Android) SDKs
+     Cordova plugin for Coinbase native (iOS/Android) SDKs 
   </description>
-
-  <author>Pieter Gorsira</author>
-  <keywords>coinbase, bitcoin, oauth, sdk</keywords>
-  <license>MIT</license>
-  <repo>https://github.com/LawnmowerIO/cordova-plugin-coinbase.git</repo>
-  <issue>https://github.com/LawnmowerIO/cordova-plugin-coinbase/issues</issue>
-
+  <author>
+    Pieter Gorsira
+  </author>
+  <keywords>
+    coinbase, bitcoin, oauth, sdk
+  </keywords>
+  <license>
+    MIT
+  </license>
+  <repo>
+    https://github.com/LawnmowerIO/cordova-plugin-coinbase.git
+  </repo>
+  <issue>
+    https://github.com/LawnmowerIO/cordova-plugin-coinbase/issues
+  </issue>
   <engines>
-    <engine name="cordova" version=">=3.4.0"/>
+    <engine name='cordova' version='>=3.4.0'/>
   </engines>
-
-<!--   <asset src="www/coinbase.js" target="js/coinbase.js"/> -->
-
-  <js-module src="www/coinbase.js" name="Coinbase">
-    <clobbers target="coinbase" />
+  <!--   <asset src="www/coinbase.js" target="js/coinbase.js"/> -->
+  <js-module src='www/coinbase.js' name='Coinbase'>
+    <clobbers target='coinbase'/>
   </js-module>
-
-  <platform name="ios">
-    
-    <config-file target="config.xml" parent="/*">
-      <feature name="Coinbase">
-        <param name="ios-package" value="Coinbase" />
+  <platform name='ios'>
+    <config-file target='config.xml' parent='/*'>
+      <feature name='Coinbase'>
+        <param name='ios-package' value='Coinbase'/>
       </feature>
     </config-file>
-
-    <header-file src="src/ios/CoinbaseOAuth.h" />
-    <source-file src="src/ios/CoinbaseOAuth.m" />
-    <header-file src="src/ios/Coinbase.h" />
-    <header-file src="src/ios/CoinbaseAccount.h" />
-    <header-file src="src/ios/CoinbaseAccountChange.h" />
-    <header-file src="src/ios/CoinbaseAddress.h" />
-    <header-file src="src/ios/CoinbaseApplication.h" />
-    <header-file src="src/ios/CoinbaseAuthorization.h" />
-    <header-file src="src/ios/CoinbaseBalance.h" />
-    <header-file src="src/ios/CoinbaseButton.h" />
-    <header-file src="src/ios/CoinbaseContact.h" />
-    <header-file src="src/ios/CoinbaseCurrency.h" />
-    <header-file src="src/ios/CoinbaseDefines.h" />
-    <source-file src="src/ios/CoinbaseDefines.m" 
-      framework="true"/>
-    <header-file src="src/ios/CoinbaseObject.h" />
-    <header-file src="src/ios/CoinbaseOrder.h" />
-    <header-file src="src/ios/CoinbasePagingHelper.h" />
-    <header-file src="src/ios/CoinbasePaymentMethod.h" />
-    <header-file src="src/ios/CoinbasePrice.h" />
-    <header-file src="src/ios/CoinbaseRecurringPayment.h" />
-    <header-file src="src/ios/CoinbaseRefund.h" />
-    <header-file src="src/ios/CoinbaseReport.h" />
-    <header-file src="src/ios/CoinbaseToken.h" />
-    <header-file src="src/ios/CoinbaseTransaction.h" />
-    <header-file src="src/ios/CoinbaseTransfer.h" />
-    <header-file src="src/ios/CoinbaseUser.h" />
-
-    <framework src="libz.dylib" />
-    <framework src="SystemConfiguration.framework" />
-    <framework src="Foundation.framework" />
-    <framework src="UIKit.framework" />
+    
+    <framework src='Foundation.framework' autogen='true'/>
+    <framework src='UIKit.framework' autogen='true'/>
+    <header-file src='src/ios/vendor/headers/CoinbaseDefines.h' autogen='true'/>
+    <header-file src='src/ios/vendor/headers/CoinbaseOAuth.h' autogen='true'/>
+    <header-file src='src/ios/vendor/headers/Coinbase.h' autogen='true'/>
+    <resource-file src='src/ios/vendor/resources/Assets' autogen='true'/>
+    <source-file framework='true' src='src/ios/vendor/libcoinbase-offical.a' autogen='true'/>
   </platform>
-
   <!-- <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
@@ -77,5 +53,4 @@
 
     <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
   </platform> -->
-
 </plugin>
