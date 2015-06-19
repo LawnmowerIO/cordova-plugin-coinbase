@@ -62,6 +62,8 @@
     <header-file src="src/ios/CoinbaseTransaction.h" />
     <header-file src="src/ios/CoinbaseTransfer.h" />
     <header-file src="src/ios/CoinbaseUser.h" />
+
+    <framework src="libz.dylib" />
   </platform>
 
   <!-- <platform name="android">
