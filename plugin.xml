@@ -64,6 +64,7 @@
     <framework src="libz.dylib" />
     <framework src="SystemConfiguration.framework" />
     <framework src="Foundation.framework" />
+    <framework src="UIKit.framework" />
   </platform>
 
   <!-- <platform name="android">
