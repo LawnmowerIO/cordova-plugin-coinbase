@@ -6,5 +6,7 @@
 
 - (void) startOAuthAuthentication: (CDVInvokedUrlCommand*)command;
 
+- (void) handleOpenURL: (NSNotification*)notification;
+
 @end
 

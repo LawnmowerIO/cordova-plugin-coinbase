@@ -20,4 +20,24 @@
   [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+/* NOTE: calls into JavaScript must not call or trigger any blocking UI, like alerts */
+- (void)handleOpenURL:(NSNotification*)notification
+{
+    // override to handle urls sent to your app
+    // register your url schemes in your App-Info.plist
+
+    NSURL* url = [notification object];
+
+    if ([url isKindOfClass:[NSURL class]]) {
+        NSLog(@"%@", url);
+        if ([[url scheme] isEqualToString:@"io.lawnmower.mobile"]) {
+            // This is a redirect from the Coinbase OAuth web page or app.
+            NSLog(@"%@", url);
+            return YES;
+        }
+        return NO;
+        }
+}
+
+
 @end
