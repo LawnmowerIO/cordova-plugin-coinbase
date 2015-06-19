@@ -31,7 +31,7 @@
   <platform name='ios'>
     <config-file target='config.xml' parent='/*'>
       <feature name='CoinbaseOAuth'>
-        <param name='ios-package' value='CoinbaseOAuth'/>
+        <param name='ios-package' value='CoinbaseOAuthPlugin'/>
       </feature>
     </config-file>
     <framework src='Foundation.framework' autogen='true'/>

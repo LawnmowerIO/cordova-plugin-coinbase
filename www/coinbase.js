@@ -1,7 +1,7 @@
-/*global cordova, module*/
+// Cordova <-> native interface
 
 module.exports = {
-    greet: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "Hello", "greet", [name]);
+    startOAuthAuthentication: function (clientId, scope, redirectUri, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "CoinbaseOAuth", "startOAuthAuthentication", [clientId, scope, redirectUri]);
     }
 };
