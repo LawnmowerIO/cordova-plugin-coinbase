@@ -24,7 +24,7 @@
   <engines>
     <engine name='cordova' version='>=3.4.0'/>
   </engines>
-  <!--   <asset src="www/coinbase.js" target="js/coinbase.js"/> -->
+
   <js-module src='www/coinbase.js' name='Coinbase'>
     <clobbers target='coinbase'/>
   </js-module>
