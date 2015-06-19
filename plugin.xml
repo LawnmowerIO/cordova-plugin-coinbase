@@ -10,11 +10,9 @@
   </description>
 
   <author>Pieter Gorsira</author>
-
   <keywords>coinbase, bitcoin, oauth, sdk</keywords>
-
+  <license>MIT</license>
   <repo>https://github.com/LawnmowerIO/cordova-plugin-coinbase.git</repo>
-
   <issue>https://github.com/LawnmowerIO/cordova-plugin-coinbase/issues</issue>
 
   <engines>
@@ -64,6 +62,8 @@
     <header-file src="src/ios/CoinbaseUser.h" />
 
     <framework src="libz.dylib" />
+    <framework src="SystemConfiguration.framework" />
+    <framework src="CoreData.framework" />
   </platform>
 
   <!-- <platform name="android">
