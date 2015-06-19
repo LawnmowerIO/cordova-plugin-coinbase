@@ -48,7 +48,8 @@
     <header-file src="src/ios/CoinbaseContact.h" />
     <header-file src="src/ios/CoinbaseCurrency.h" />
     <header-file src="src/ios/CoinbaseDefines.h" />
-    <source-file src="src/ios/CoinbaseDefines.m" />
+    <source-file src="src/ios/CoinbaseDefines.m" 
+      framework="true"/>
     <header-file src="src/ios/CoinbaseObject.h" />
     <header-file src="src/ios/CoinbaseOrder.h" />
     <header-file src="src/ios/CoinbasePagingHelper.h" />
