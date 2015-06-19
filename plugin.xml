@@ -30,8 +30,8 @@
   </js-module>
   <platform name='ios'>
     <config-file target='config.xml' parent='/*'>
-      <feature name='Coinbase'>
-        <param name='ios-package' value='Coinbase'/>
+      <feature name='CoinbaseOAuth'>
+        <param name='ios-package' value='CoinbaseOAuth'/>
       </feature>
     </config-file>
     <framework src='Foundation.framework' autogen='true'/>
