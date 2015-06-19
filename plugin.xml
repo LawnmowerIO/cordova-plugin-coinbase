@@ -1,45 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.example.hello"
-        version="0.7.0">
+        id="io.lawnmower.coinbase"
+        version="0.0.1">
 
-  <name>Hello</name>
+  <name>Coinbase</name>
+
+  <description>
+    Cordova plugin for Coinbase native (iOS/Android) SDKs
+  </description>
+
+  <author>Pieter Gorsira</author>
+
+  <keywords>coinbase, bitcoin, oauth, sdk</keywords>
+
+  <repo>https://github.com/LawnmowerIO/cordova-plugin-coinbase.git</repo>
+
+  <issue>https://github.com/LawnmowerIO/cordova-plugin-coinbase/issues</issue>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
 
-  <asset src="www/hello.js" target="js/hello.js"/>
+<!--   <asset src="www/coinbase.js" target="js/coinbase.js"/> -->
 
-  <js-module src="www/hello.js" name="hello">
-    <clobbers target="hello" />
+  <js-module src="www/coinbase.js" name="Coinbase">
+    <clobbers target="coinbase" />
   </js-module>
 
-  <platform name="android">
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/*">
+      <feature name="CoinbaseOAuth">
+        <param name="ios-package" value="CoinbaseOAuth" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/CoinbaseOAuth.h" />
+    <source-file src="src/ios/CoinbaseOAuth.m" />
+    <header-file src="src/ios/Coinbase.h" />
+    <header-file src="src/ios/CoinbaseAccount.h" />
+    <header-file src="src/ios/CoinbaseAccountChange.h" />
+    <header-file src="src/ios/CoinbaseAddress.h" />
+    <header-file src="src/ios/CoinbaseApplication.h" />
+    <header-file src="src/ios/CoinbaseAuthorization.h" />
+    <header-file src="src/ios/CoinbaseBalance.h" />
+    <header-file src="src/ios/CoinbaseButton.h" />
+    <header-file src="src/ios/CoinbaseContact.h" />
+    <header-file src="src/ios/CoinbaseCurrency.h" />
+    <header-file src="src/ios/CoinbaseDefines.h" />
+    <header-file src="src/ios/CoinbaseObject.h" />
+    <header-file src="src/ios/CoinbaseOrder.h" />
+    <header-file src="src/ios/CoinbasePagingHelper.h" />
+    <header-file src="src/ios/CoinbasePaymentMethod.h" />
+    <header-file src="src/ios/CoinbasePrice.h" />
+    <header-file src="src/ios/CoinbaseRecurringPayment.h" />
+    <header-file src="src/ios/CoinbaseRefund.h" />
+    <header-file src="src/ios/CoinbaseReport.h" />
+    <header-file src="src/ios/CoinbaseToken.h" />
+    <header-file src="src/ios/CoinbaseTransaction.h" />
+    <header-file src="src/ios/CoinbaseTransfer.h" />
+    <header-file src="src/ios/CoinbaseUser.h" />
+  </platform>
+
+  <!-- <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Hello">
-        <param name="android-package" value="com.example.plugin.Hello"/>
+        <param name="android-package" value="io.lawnmower.plugin.Hello"/>
       </feature>
     </config-file>
 
     <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
-  </platform>
-
-  <platform name="ios">
-    
-    <config-file target="config.xml" parent="/widget">
-      <feature name="Hello">
-        <param name="ios-package" value="HWPHello" />
-      </feature>
-    </config-file>
-
-    <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>
-    <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>
-  </platform>
-
-  <platform name="wp7">
-    <source-file src="src/wp7/Hello.cs"/>
-  </platform>
+  </platform> -->
 
 </plugin>
