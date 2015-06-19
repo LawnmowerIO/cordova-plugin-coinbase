@@ -28,8 +28,8 @@
   <platform name="ios">
     
     <config-file target="config.xml" parent="/*">
-      <feature name="CoinbaseOAuth">
-        <param name="ios-package" value="CoinbaseOAuth" />
+      <feature name="Coinbase">
+        <param name="ios-package" value="Coinbase" />
       </feature>
     </config-file>
 
