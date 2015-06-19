@@ -33,10 +33,8 @@
         if ([[url scheme] isEqualToString:@"io.lawnmower.mobile"]) {
             // This is a redirect from the Coinbase OAuth web page or app.
             NSLog(@"%@", url);
-            return YES;
         }
-        return NO;
-        }
+    }
 }
 
 
