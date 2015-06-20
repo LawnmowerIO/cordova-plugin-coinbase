@@ -28,7 +28,8 @@ public class CoinbaseOAuthPlugin extends CordovaPlugin {
 
     private void startOAuthAuthentication(String clientId, String scope, String redirectUri,  CallbackContext callbackContext) {
         if (null != clientId && clientId.length() > 0 && null != scope && scope.length() > 0 && null != redirectUri && redirectUri.length() > 0) {
-            OAuth.beginAuthorization(this, clientId, scope, redirectUri, null);
+            Context context = this.cordova.getActivity().getApplicationContext(); 
+            OAuth.beginAuthorization(context, clientId, scope, redirectUri, null);
             callbackContext.success("Success");
         } else {
             callbackContext.error("Invalid params");
