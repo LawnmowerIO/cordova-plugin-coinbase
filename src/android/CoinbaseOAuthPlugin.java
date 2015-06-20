@@ -5,6 +5,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import com.coinbase.android.sdk.OAuth;
+import com.coinbase.api.exception.CoinbaseException;
 import com.coinbase.api.*;
 
 import android.content.Context;
