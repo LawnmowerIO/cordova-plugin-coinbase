@@ -14,6 +14,22 @@
   <js-module src='www/coinbase.js' name='Coinbase'>
     <clobbers target='coinbase'/>
   </js-module>
+
+  <platform name="android">
+    <dependency id="com.coinbase.android@1.0.1" />
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CoinbaseOAuth">
+        <param name="android-package" value="io.lawnmower.plugin.coinbase.CoinbaseOAuthPlugin"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    </config-file>
+    <source-file src="src/android/CoinbaseOAuthPlugin.java" target-dir="src/io/lawnmower/plugin/coinbase"/>
+  </platform>
+
   <platform name='ios'>
     <config-file target='config.xml' parent='/*'>
       <feature name='CoinbaseOAuth'>
@@ -30,18 +46,5 @@
     <resource-file src='src/ios/vendor/resources/Assets' autogen='true'/>
     <source-file framework='true' src='src/ios/vendor/libcoinbase-offical.a' autogen='true'/>
   </platform>
-  <platform name="android">
-    <dependency id="com.coinbase.android@1.0.1" />
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="CoinbaseOAuth">
-        <param name="android-package" value="io.lawnmower.plugin.coinbase.CoinbaseOAuthPlugin"/>
-      </feature>
-    </config-file>
-    <config-file target="AndroidManifest.xml" parent="/*">
-      <uses-permission android:name="android.permission.INTERNET" />
-      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    </config-file>
-    <source-file src="src/android/CoinbaseOAuthPlugin.java" target-dir="src/io/lawnmower/plugin/coinbase"/>
-  </platform>
+  
 </plugin>
