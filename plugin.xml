@@ -21,8 +21,14 @@
         <param name="android-package" value="io.lawnmower.plugin.coinbase.CoinbaseOAuthPlugin"/>
       </feature>
     </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    </config-file>
+
     <source-file src="src/android/CoinbaseOAuthPlugin.java" target-dir="src/io/lawnmower/plugin/coinbase"/>
-    <source-file src="src/android/vendor/coinbase-android-sdk-1.0.2.jar" target-dir="libs" framework="true" />    
+    <source-file src="src/android/vendor/coinbase-android-sdk-1.0.2-SNAPSHOT.jar" target-dir="libs" framework="true" />    
     <source-file src="src/android/vendor/coinbase-java-1.10.0-SNAPSHOT.jar" target-dir="libs" framework="true" /> 
     <source-file src="src/android/vendor/commons-codec-1.9.jar" target-dir="libs" framework="true" />    
     <source-file src="src/android/vendor/commons-io-2.4.jar" target-dir="libs" framework="true" />    
