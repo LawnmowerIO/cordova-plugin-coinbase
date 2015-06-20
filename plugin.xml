@@ -22,8 +22,20 @@
       </feature>
     </config-file>
     <source-file src="src/android/CoinbaseOAuthPlugin.java" target-dir="src/io/lawnmower/plugin/coinbase"/>
-    <source-file src="src/android/vendor/coinbase-java-1.10.0.jar" target-dir="libs" framework="true" /> 
     <source-file src="src/android/vendor/coinbase-android-sdk-1.0.2.jar" target-dir="libs" framework="true" />    
+    <source-file src="src/android/vendor/coinbase-java-1.10.0-SNAPSHOT.jar" target-dir="libs" framework="true" /> 
+    <source-file src="src/android/vendor/commons-codec-1.9.jar" target-dir="libs" framework="true" />    
+    <source-file src="src/android/vendor/commons-io-2.4.jar" target-dir="libs" framework="true" />    
+    <source-file src="src/android/vendor/commons-logging-1.1.3.jar" target-dir="libs" framework="true" />    
+    <source-file src="src/android/vendor/httpclient-4.3.6.jar" target-dir="libs" framework="true" />    
+    <source-file src="src/android/vendor/httpcore-4.3.3.jar" target-dir="libs" framework="true" />    
+    <source-file src="src/android/vendor/jackson-annotations-2.4.0.jar" target-dir="libs" framework="true" />
+    <source-file src="src/android/vendor/jackson-core-2.4.0.jar" target-dir="libs" framework="true" />    
+    <source-file src="src/android/vendor/jackson-databind-2.4.0.jar" target-dir="libs" framework="true" /> 
+    <source-file src="src/android/vendor/jackson-datatype-joda-2.4.0.jar" target-dir="libs" framework="true" />   
+    <source-file src="src/android/vendor/joda-money-0.9.1.jar" target-dir="libs" framework="true" />     
+    <source-file src="src/android/vendor/joda-time-2.3.jar" target-dir="libs" framework="true" />    
+    <source-file src="src/android/vendor/opencsv-2.0.jar" target-dir="libs" framework="true" />    
   </platform>
 
   <platform name='ios'>
