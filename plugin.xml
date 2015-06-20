@@ -16,7 +16,7 @@
   </js-module>
 
   <platform name="android">
-    <dependency id="com.coinbase.android@1.0.1" />
+    <dependency id="com.coinbase.android@1.0.1" url="http://github.com/coinbase/coinbase-android-sdk"/>
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="CoinbaseOAuth">
