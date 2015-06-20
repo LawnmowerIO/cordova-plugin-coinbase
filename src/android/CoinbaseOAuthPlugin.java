@@ -5,6 +5,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import com.coinbase.android.sdk.OAuth;
+import com.coinbase.api.exception.CoinbaseException;
 
 import android.content.Context;
 
@@ -31,8 +32,14 @@ public class CoinbaseOAuthPlugin extends CordovaPlugin {
     private void startOAuthAuthentication(String clientId, String scope, String redirectUri,  CallbackContext callbackContext) {
         if (null != clientId && clientId.length() > 0 && null != scope && scope.length() > 0 && null != redirectUri && redirectUri.length() > 0) {
             Context context = this.cordova.getActivity().getApplicationContext(); 
-            OAuth.beginAuthorization(context, clientId, scope, redirectUri, null);
-            callbackContext.success("Success");
+            
+            try{
+                OAuth.beginAuthorization(context, clientId, scope, redirectUri, null);
+            } catch(CoinbaseException e){
+                System.err.println("Caught IOException: " + e.getMessage());
+            } finally {
+                callbackContext.success("Success");
+            }
         } else {
             callbackContext.error("Invalid params");
         }
