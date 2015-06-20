@@ -49,7 +49,7 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="CoinbaseOAuth">
-        <param name="android-package" value="io.lawnmower.plugin.CoinbaseOAuthPlugin"/>
+        <param name="android-package" value="io.lawnmower.plugin.coinbase.CoinbaseOAuthPlugin"/>
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
