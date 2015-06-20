@@ -16,14 +16,13 @@
   </js-module>
 
   <platform name="android">
-    <dependency id="com.coinbase.android@1.0.1" url="http://github.com/coinbase/coinbase-android-sdk"/>
-
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="CoinbaseOAuth">
         <param name="android-package" value="io.lawnmower.plugin.coinbase.CoinbaseOAuthPlugin"/>
       </feature>
     </config-file>
     <source-file src="src/android/CoinbaseOAuthPlugin.java" target-dir="src/io/lawnmower/plugin/coinbase"/>
+    <source-file src="src/android/vendor/coinbase-android-sdk-1.0.2.jar" target-dir="libs" framework="true" />    
   </platform>
 
   <platform name='ios'>
