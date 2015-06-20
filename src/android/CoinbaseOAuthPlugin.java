@@ -6,6 +6,8 @@ import org.json.JSONException;
 
 import com.coinbase.android.sdk.OAuth;
 
+import android.content.Context;
+
 public class CoinbaseOAuthPlugin extends CordovaPlugin {
 
     @Override
