@@ -23,10 +23,6 @@
         <param name="android-package" value="io.lawnmower.plugin.coinbase.CoinbaseOAuthPlugin"/>
       </feature>
     </config-file>
-    <config-file target="AndroidManifest.xml" parent="/*">
-      <uses-permission android:name="android.permission.INTERNET" />
-      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    </config-file>
     <source-file src="src/android/CoinbaseOAuthPlugin.java" target-dir="src/io/lawnmower/plugin/coinbase"/>
   </platform>
 
@@ -46,5 +42,5 @@
     <resource-file src='src/ios/vendor/resources/Assets' autogen='true'/>
     <source-file framework='true' src='src/ios/vendor/libcoinbase-offical.a' autogen='true'/>
   </platform>
-  
+
 </plugin>
