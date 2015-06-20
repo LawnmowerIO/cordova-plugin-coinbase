@@ -44,14 +44,14 @@
     <resource-file src='src/ios/vendor/resources/Assets' autogen='true'/>
     <source-file framework='true' src='src/ios/vendor/libcoinbase-offical.a' autogen='true'/>
   </platform>
-  <!-- <platform name="android">
+  <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Hello">
-        <param name="android-package" value="io.lawnmower.plugin.Hello"/>
+      <feature name="CoinbaseOAuth">
+        <param name="android-package" value="io.lawnmower.plugin.CoinbaseOAuthPlugin"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
-  </platform> -->
+    <source-file src="src/android/CoinbaseOAuthPlugin.java" target-dir="src/io/lawnmower/plugin/coinbase"/>
+  </platform>
 </plugin>
